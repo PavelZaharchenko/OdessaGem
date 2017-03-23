@@ -1,0 +1,128 @@
+.page-main__about {
+	margin-top: 100px;
+	padding-top: 50px;
+}
+.page-main__about-title {
+	font-size: 70px;
+	font-family: BoldScript;
+	text-align: center;
+}
+.page-main__about-list {
+	width: 100%;
+	.fixy ();
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+.page-main__about-item {
+	width: 100%;
+	display: flex;
+	margin: 20px 0;
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid @colorGrey;
+	background-color: white;
+    box-shadow: 0px 10px 83px -10px rgba(0,0,0,0.75);
+}
+.page-main__about-foto {
+	background-size: 100% 100%;
+	width: 250px;
+	height: 150px;
+	border-radius: 10px;
+	border: 1px solid @colorBlack;
+}
+.page-main__about-item_descript {
+	line-height: 1.5;
+	margin: auto;
+	font-size: 16px;
+	font-family: 'OpenSans-LightItalic';
+	width: 70%;
+}
+// ховер эфект 
+.page-main__foto-wrapper {
+	display: inline-block;
+	width: calc(~'50% - 1px');
+	position: relative;
+	overflow: hidden;
+	&.double-width {
+		width: 250px;
+	}
+	&:hover .hover-block {
+		top: 0;
+	}
+	&:nth-child(odd):not(:first-child) {
+		margin-left: 2px;
+	}
+}
+.hover-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 250px;
+	height: 150px;
+	background: fadeout(#d61e38, 30%);
+	border-radius: 10px;
+	transition: .3s;
+}
+.zoom-icon {
+	width: 20px;
+	height: 20px;
+	background: url(../img/shape-15.png);
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+	.page-main__about-title {
+		font-size: 60px;
+	}
+	.page-main__about-list {
+		padding: 10px; 
+	}
+}
+@media screen and (max-width: 768px) {
+	.page-main__about-title {
+		padding: 5px; 
+	}
+	.page-main__about-item_descript {
+		width: 60%;
+	}
+
+}
+@media screen and (max-width: 414px) {
+	.page-main__about-title {
+		font-size: 30px;
+	}
+	.page-main__about-item {
+		flex-wrap: wrap;
+		padding: 5px; 
+	}
+	.page-main__about-item_descript {
+		width: 100%;
+		font-size: 12px;
+	}
+	.page-main__about-item {
+		width: 262px;;
+		margin: auto;
+		text-align: center; 
+		&:not(:last-child) {
+			margin-bottom: 10px; 
+		}
+	}
+}
+@media screen and (max-width: 320px) {
+	.page-main__about-foto {
+		width: 200px;
+		height: 100px;
+	}
+	.hover-block {
+		width: 200px;
+		height: 100px;
+		left: 25px;
+	}
+}
+
+

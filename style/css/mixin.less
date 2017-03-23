@@ -1,0 +1,34 @@
+@colorWhite: #ffffff;
+@colorBottom: #23232e;
+@colorBlock: #23232e;
+@colorGit: #b5b5b5;
+@colorRed: #f15a25;
+@colorGrey: #bababa;
+@colorBlack: #000;
+@colorOrange: rgba(236, 177, 85, 1);
+@colorServices: #e0e0e0;
+
+
+.fixy () {
+	display: flex;
+	justify-content: space-between;
+}
+.class-before() {
+	position: absolute;
+	content: '';
+	width: 20px;
+	height: 20px;
+	left: -25px;
+	top: 0px;
+}
+.round{
+	content: '';
+	width: 10px;
+	height: 10px;
+	border: 2px solid @colorBlock;
+	border-radius: 50%;
+	z-index: 2;
+	position: absolute;
+	top: 10px;
+	background-color: @colorWhite;
+}
